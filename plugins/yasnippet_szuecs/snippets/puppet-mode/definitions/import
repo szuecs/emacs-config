@@ -1,0 +1,4 @@
+#name : import a_module
+#key : imp
+# --
+import "${1:module}"

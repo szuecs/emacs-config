@@ -1,0 +1,14 @@
+# name: junit4 test class
+# key: tc
+# group: test
+# --
+public class ${1:`(let ((fn (capitalize (file-name-nondirectory
+                                 (file-name-sans-extension
+				 (or (buffer-file-name)
+				     (buffer-name (current-buffer))))))))
+           (cond
+             ((string-match "_" fn) (replace-match "" nil nil fn))
+              (t fn)))`}Test {
+ 	    $0
+}
+

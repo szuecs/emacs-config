@@ -1,0 +1,1 @@
+Not possible, because yaml-mode use TAB to cycle commands. If you want to use it you have to hack around this.

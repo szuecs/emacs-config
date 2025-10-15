@@ -1,0 +1,32 @@
+# -*- mode: snippet -*-
+# uuid: 443D9794-5939-48FE-9983-C0B9FEE0A4CE
+# key: cdfa
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Core Data Faults
+## condition: "
+# --
+CoreData\$target:CoreData::BeginFault
+{
+	self->faultStart = vtimestamp;
+	printf("Fault Object: %s",copyinstr(arg0));
+	ustack();
+}
+
+CoreData\$target:CoreData::EndFault
+{
+	self->faultEnd= (vtimestamp - self->faultStart) / 1000;
+	printf("Fault Duration: %u",self->faultEnd);
+}
+
+CoreData\$target:CoreData::BeginRelationshipFault
+{
+	self->relationshipFaultStart = vtimestamp;
+	printf("Relationship Fault Source: %s Relationship: %s",copyinstr(arg0),copyinstr(arg1));
+	ustack();
+}
+
+CoreData\$target:CoreData::EndRelationshipFault
+{
+	self->relationshipFaultEnd= (vtimestamp - self->relationshipFaultStart) / 1000;
+	printf("Relationship Fault Duration: %u",self->relationshipFaultEnd);
+}

@@ -1,0 +1,4 @@
+# name: mtime of a file
+# key: mtime
+# --
+date -r ${1:fname} +%s

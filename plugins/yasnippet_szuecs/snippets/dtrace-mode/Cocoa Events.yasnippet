@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# uuid: 718E1C2D-304F-49E3-ACA2-4EE3EC64EE6E
+# key: coev
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Cocoa Events
+## condition: "
+# --
+objc\$target:NSApplication:-sendEvent*:entry
+{
+	self->evtPointer = (user_addr_t)arg2;
+
+	self->theEvent = (unsigned int)*(uint32_t*)copyin(self->evtPointer + 4, 4);
+
+	this->eventStr = self->theEvent == 1 ? "Left Mouse Down" : self->theEvent == 2 ? "Left Mouse Up" : self->theEvent == 3 ? "Right Mouse Down" : self->theEvent == 4 ? "Right Mouse Up" : self->theEvent == 5 ? "Mouse Moved" : self->theEvent == 6 ? "Left Mouse Dragged" : self->theEvent == 7 ? "Right Mouse Dragged" : self->theEvent == 8 ? "Mouse Entered" : self->theEvent == 9 ? "Mouse Exited" : self->theEvent == 10 ? "Key Down" : self->theEvent == 11 ? "Key Up" : self->theEvent == 12 ? "Flags Changed" : self->theEvent == 13 ? "AppKit Defined" : self->theEvent == 14 ? "System Defined" : self->theEvent == 15 ? "Application Defined" : self->theEvent == 16 ? "Periodic" : self->theEvent == 17 ? "Cursor Update" : self->theEvent == 22 ? "Scroll Wheel" : self->theEvent == 23 ? "Tablet Point" : self->theEvent == 24 ? "Tablet Proximit" : self->theEvent == 25 ? "Other Mouse Down" : self->theEvent == 26 ? "Other Mouse Up" : self->theEvent == 27 ? "Other Mouse Dragged" : "Unknown";
+
+	printf("Event Kind: %i Event Type: %s",self->theEvent,this->eventStr);
+
+	ustack();
+}

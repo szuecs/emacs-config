@@ -1,0 +1,31 @@
+# name: posix find recursive - rm
+# key: find
+# --
+MAX_CHUNK=500
+
+recursivefind () {
+    ( cd -P -- "\$1";
+    [ \$# -lt 3 ] || [ "\$PWD" = "\$3" ] || exit 1;
+    for i in ..?* .[!.]* *;
+    do
+        [ -e "\$i" ] && eval "\$2 \"\\$i\"";
+        [ -d "\$i" ] && recursivefind "\$i" "\$2" "\${PWD%/}/\$i";
+    done )
+}
+
+slow_rm_handler () {
+  [ -d \${1} ] && rmdir \${1} 2>/dev/null
+  if [ -f \${1} ]; then
+    echo "rm -f \${1}";
+    rm -f \${1}
+    if [[ \$(expr \$RANDOM % MAX_CHUNK) -eq 5 ]]; then
+      echo "sleep 5 - \$(date)"
+      sleep 5
+    fi
+  fi
+}
+
+del_all () {
+  target=\$1
+  while [ -d \$target ]; do recursivefind \$target slow_rm_handler; rmdir \$target; done
+}

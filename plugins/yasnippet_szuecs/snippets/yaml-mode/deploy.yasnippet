@@ -1,0 +1,22 @@
+# name: Kubernetes deploy
+# key: deploy
+# --
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ${1:name}
+  version: ${2:v0.0.1}
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ${1:name}
+        version: ${2:v0.0.1}
+    spec:
+      containers:
+      - name: ${1:name}
+        image: ${2:image:tag}
+        ports:
+        - containerPort: 80
+

@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# uuid: 05DFF82C-5A29-4EBD-93FE-C165FFFB5EA8
+# key: cla
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: ClassName = Struct .. do .. end
+## condition: "
+# --
+class ${1:`(let ((fn (capitalize (file-name-nondirectory
+                                 (file-name-sans-extension
+				 (or (buffer-file-name)
+				     (buffer-name (current-buffer))))))))
+           (cond
+             ((string-match "_" fn) (replace-match "" nil nil fn))
+              (t fn)))`} = Struct.new(:${2:attr_names}) do
+  def ${3:method_name}
+    $0
+  end
+  
+end

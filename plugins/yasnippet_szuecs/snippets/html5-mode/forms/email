@@ -1,0 +1,4 @@
+#name : <input type="email"/>
+#key: email
+# --
+<input type="email" id="email" required="required" class="$1"  />

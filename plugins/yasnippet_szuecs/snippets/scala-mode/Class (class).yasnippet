@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# uuid: 8092FC08-5291-4A9F-BAF3-DB352DDB6043
+# key: class
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Class
+## condition: "
+# --
+${1:public }class ${2:${TM_FILENAME/(.*?)(\..+)/$1/}} extends ${3:Object}
+{
+	$2 (${4:arguments}) {
+		${0:// expression}
+	}
+}

@@ -1,0 +1,5 @@
+#name : include a_module
+#key: inc
+#
+# --
+include ${1:module}

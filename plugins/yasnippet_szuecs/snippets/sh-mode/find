@@ -1,0 +1,4 @@
+# name: find(1) mtime delete
+# key: find
+# --
+find ${1:path} -mtime +30 -delete

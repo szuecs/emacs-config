@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# uuid: CEE866A5-FA4B-4C5D-A80C-137A620E825E
+# key: slurp
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Read File
+## condition: "
+# --
+my \$${1:var};
+{ local \$/ = undef; local *FILE; open FILE, "<${2:file}"; \$$1 = <FILE>; close FILE }

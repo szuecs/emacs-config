@@ -1,0 +1,4 @@
+# name: COPY table TO
+# key: copy
+# --
+COPY ${1:TableName} TO '${2:filename}' WITH DELIMITER '${3:|}';

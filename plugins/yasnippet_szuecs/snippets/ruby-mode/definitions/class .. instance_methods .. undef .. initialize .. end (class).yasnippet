@@ -1,0 +1,26 @@
+# -*- mode: snippet -*-
+# uuid: E98FB8F9-7302-431D-8BF2-275A68A6126C
+# key: cla
+# name: class BlankSlate .. initialize .. end
+## condition: "
+# --
+class ${1:`(let ((fn (capitalize (file-name-nondirectory
+                                 (file-name-sans-extension
+				 (or (buffer-file-name)
+				     (buffer-name (current-buffer))))))))
+           (cond
+             ((string-match "_" fn) (replace-match "" nil nil fn))
+
+  instance_methods.each { |meth| undef_method(meth) unless meth =~ /\A__/ }
+  
+  def initialize(${3:args})
+    @${3:delegate} = ${4:delegate_object}
+    $0
+  end
+  
+  def method_missing(meth, *args, &block)
+    @${3:delegate}.send(meth, *args, &block)
+  end
+  
+  
+end

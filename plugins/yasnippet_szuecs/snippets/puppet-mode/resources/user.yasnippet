@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# key: user
+# name: user
+# --
+user { "${1:name}":
+	comment => "${2:First Last}",
+	home => "${3:/home/$1}",
+	ensure => ${4:present},
+	#shell => "/bin/bash",
+	#uid => '501',
+	#gid => '20'
+}$0

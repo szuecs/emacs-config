@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# uuid: 10B60336-F026-4BE3-8EF5-684848FF57F0
+# key: .unbind
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: unbind
+## condition: "
+# --
+.unbind('${1:event name(s)}'${2/(^,).*|.+/(?1::, )/}${2/(^([0-9]+$|,.*))|.+/(?1::')/}${2:functionName}${2/(^([0-9]+$|,.*))|.+/(?1::')/})$0

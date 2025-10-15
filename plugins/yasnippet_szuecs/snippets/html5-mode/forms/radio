@@ -1,0 +1,4 @@
+# name: <input type="radio" ../>
+# key : radio
+# --
+<input type="radio" name="$1" value="${2:a}"/>

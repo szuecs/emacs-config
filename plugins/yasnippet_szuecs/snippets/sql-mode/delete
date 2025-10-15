@@ -1,0 +1,4 @@
+# name: DELETE...
+# key: del
+# --
+DELETE FROM ${1:TableName} WHERE ${3:foo <> 'bar'};

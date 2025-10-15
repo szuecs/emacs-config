@@ -1,0 +1,14 @@
+#name : vcsrepo {..}
+#key: git
+# --
+file { "${1:/path/to/workingcopy}":
+  ensure => directory,
+}
+vcsrepo { "$1":
+  provider => "git",
+  ensure   => latest,
+  source   => "https://${2:git.host.tld/repo}.git",
+  require  => File["$1"], 
+  bare_repositories => true,
+}
+$0

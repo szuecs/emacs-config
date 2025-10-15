@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: CC3F4EBE-A763-4AD9-9170-E6D49041F0BE
+# key: gct
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Garbage Collection Total
+## condition: "
+# --
+pid\$target::auto_trace_collection_end:entry
+{
+	printf("AutoZone - Objects Reclaimed: %i - Bytes Reclaimed: %i - Bytes in Use: %i - Total: %i",(int)arg2,(int)arg3,(int)arg4,(int)arg5);
+	ustack();
+}

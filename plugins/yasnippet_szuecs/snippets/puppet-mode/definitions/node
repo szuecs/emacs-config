@@ -1,0 +1,7 @@
+#name : node foo { .. }
+#key: node
+# --
+node ${1:node_name, "hostname", /hostregex/} {
+  include ${2:module}
+  $0
+}

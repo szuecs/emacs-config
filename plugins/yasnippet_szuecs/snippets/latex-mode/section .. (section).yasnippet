@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# uuid: 24282E70-BE2C-11D9-8F93-000D93589AF6
+# key: sec
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Section
+## condition: "text.tex.latex
+# --
+\section{${1:section name}} % (fold)
+\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3)/g}}}
+${0:`yas/selected-text`}
+% section $2 (end)

@@ -1,0 +1,9 @@
+#name : package {..}
+#key: pkg
+#
+# --
+package "${1:pkg_name}": {
+  provider => "${2:providername}",
+  ensure => "${3:latest|installed}",
+}
+$0

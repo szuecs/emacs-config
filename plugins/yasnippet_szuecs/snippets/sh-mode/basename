@@ -1,0 +1,4 @@
+# name: basename
+# key: basename
+# --
+\${${1:VAR}##*/}

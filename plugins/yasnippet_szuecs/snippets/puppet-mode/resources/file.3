@@ -1,0 +1,9 @@
+#name : file {symlink}
+#key: file
+# --
+file { 
+    "${1:name}":
+        ensure => link,
+        target => "${2:target}";
+}
+$0

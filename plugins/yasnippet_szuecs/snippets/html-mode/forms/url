@@ -1,0 +1,4 @@
+#name : <input type="url"/>
+#key: url
+# --
+<input type="url" id="url" required="required" class="$1"  />

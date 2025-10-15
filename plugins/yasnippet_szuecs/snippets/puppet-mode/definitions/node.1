@@ -1,0 +1,7 @@
+#name : node foo inherits bar { .. }
+#key: node
+# --
+node ${1:node_name, "hostname", /hostregex/} inherits ${2:parent_node} {
+  include ${3:module}
+  $0
+}

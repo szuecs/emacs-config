@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# uuid: 97E5547D-95E2-4185-86CE-500FA11B21B6
+# key: .attr
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: attr
+## condition: "
+# --
+.attr('${1:attribute}'${2/(^,).*|.+/(?1::, )/}${2/(^([0-9]+$|,.*))|.+/(?1::')/}${2:value}${2/(^([0-9]+$|,.*))|.+/(?1::')/})$0

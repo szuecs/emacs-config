@@ -1,0 +1,4 @@
+# name: SELECT...
+# key: select
+# --
+SELECT ${1:*} FROM ${2:TableName} WHERE ${3:condition};

@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# uuid: 27C91862-CFF5-4D6F-8BBB-7DCF2122FA74
+# key: plugin
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: plugin (selector)
+## condition: "
+# --
+(function(\$) {
+  \$.extend(\$.expr[':'], {
+    ${1:selectorName}: function(element, index, matches, set) {
+      $0
+      return something;
+    }
+  });
+})(jQuery);

@@ -1,0 +1,12 @@
+#name : user { useradd }
+#key: user
+# --
+user { "${1:name}":
+  home     => "/home/$1",
+  uid      => "${2:123}", 
+  gid      => "$2",
+  comment  => "${3: A Comment}",
+  shell    => "${4:/bin/false}",
+  provider => useradd,
+}
+$0

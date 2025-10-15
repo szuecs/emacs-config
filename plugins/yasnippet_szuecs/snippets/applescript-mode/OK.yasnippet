@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# uuid: 244EC5B2-5821-4364-8585-A2B241A57590
+# key: dialog
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: OK
+## condition: "
+# --
+display dialog ${1:"${2:text}"}${3/.+/ ¬
+	with icon /}${3:1} ¬
+	buttons {"${4:OK}"} ¬
+	default button 1

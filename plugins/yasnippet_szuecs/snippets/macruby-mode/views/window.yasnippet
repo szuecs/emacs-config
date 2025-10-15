@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# uuid: 441917AF-9555-481D-99CD-251D2C557E39
+# key: win
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: window
+## condition: "
+# --
+window :title => "${1:Window Title}", :frame => [${10:0}, ${11:0}, ${12:100}, ${13:100}] do |win|
+	$0
+	win.will_close { exit }
+end

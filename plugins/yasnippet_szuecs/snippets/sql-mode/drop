@@ -1,0 +1,4 @@
+# name: DROP...
+# key: drop
+# --
+DROP TABLE IF EXISTS ${1:TableName} ;

@@ -1,0 +1,10 @@
+# name: Kubernetes ConfigMap with ENV
+# key: cm
+# --
+apiVersion: v1
+kind: Config
+metadata:
+  name: ${1:name}
+  namespace: ${2:default}
+data:
+  ${3:key}: ${4:value}

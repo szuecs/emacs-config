@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# uuid: 0E817E24-DC11-42A5-BBBD-EEF1FD282B2F
+# key: tab
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Tabular
+## condition: "text.tex.latex
+# --
+\\begin{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${2:c}}
+$0${2/((?<=.)c|l|r)|./(?1: & )/g}
+\\end{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}

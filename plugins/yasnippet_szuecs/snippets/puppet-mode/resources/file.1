@@ -1,0 +1,12 @@
+#name : file {.. source => <uri> }
+#key: file
+# --
+file {
+    '${1:name}':
+        owner   => '${2:root}',
+        group   => '$2',
+        mode    => '0${3:644}',
+        require => ${4:Resource['dependency']},
+        source  => ["puppet:///modules/${5:module_name/file}"];
+}
+$0

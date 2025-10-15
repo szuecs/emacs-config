@@ -1,0 +1,4 @@
+#name: ref link
+#key: ref
+#--
+:ref:`${1:reference}`

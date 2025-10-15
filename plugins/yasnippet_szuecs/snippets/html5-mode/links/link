@@ -1,0 +1,4 @@
+#name : <link rel="stylesheet" .. />
+#key : link
+# --
+<link rel="stylesheet" type="text/css" media="${1:screen}" href="${2:foo.css}"></link>

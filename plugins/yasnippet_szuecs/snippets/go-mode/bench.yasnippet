@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# key: bench
+# name: Benchmark Function
+# --
+func Benchmark${1:name} (b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		$0
+	}
+}

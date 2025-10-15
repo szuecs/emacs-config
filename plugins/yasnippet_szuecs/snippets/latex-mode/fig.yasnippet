@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# uuid: A4483087-156E-486F-91E9-4C0E3112A1A0
+# key: fig
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: fig
+## condition: "text.tex.latex
+# --
+\\begin{figure}
+  \\begin{center}
+    \\includegraphics[scale=${2:0.5}]{pictures/${1:pic}.png}
+    \\caption{${3:Untertitel}}
+    \\label{fig:$1}
+  \\end{center}
+\\end{figure}

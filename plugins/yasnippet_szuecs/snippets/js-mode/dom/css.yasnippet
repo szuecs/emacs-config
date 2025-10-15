@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# uuid: 55BFEE67-1062-48BD-86BB-9AAB92DECD75
+# key: .css
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: css
+## condition: "
+# --
+.css('${1:property}'${2/(^,).*|.+/(?1::, )/}${2/(^([0-9]+$|,.*))|.+/(?1::')/}${2:value}${2/(^([0-9]+$|,.*))|.+/(?1::')/})$0

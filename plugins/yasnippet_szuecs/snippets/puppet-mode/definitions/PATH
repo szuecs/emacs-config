@@ -1,0 +1,4 @@
+#name : Exec { path => "/usr/bin:/bin:/usr/sbin:/sbin" }
+#key : PATH
+# --
+Exec { path => "/usr/bin:/bin:/usr/sbin:/sbin${1::add_your_path_if_you_like}" }

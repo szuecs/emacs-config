@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# uuid: E670F342-6BE2-11D9-96CC-0011242E4184
+# key: hello
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Hello World (mips)
+## condition: "
+# --
+#  a basic example in mips-assembler: hello world.
+#  tested with xspim-7.0
+   
+	.text
+	.globl main
+	
+main:
+	li       \$v0, 4            # call = 4 = print_string
+	la       \$a0, hello_string # set \$a0 to point to the string
+	syscall                    # print it.
+	li       \$v0, 10           # call = 10 = exit
+	syscall                    # done.
+	
+	
+	.data
+	
+hello_string:  .asciiz  "Hello World!"
+$1

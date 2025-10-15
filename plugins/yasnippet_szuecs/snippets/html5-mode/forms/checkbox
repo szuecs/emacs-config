@@ -1,0 +1,5 @@
+#name: <input type="checkbox" ../>
+#key: checkbox
+# --
+<input type="checkbox" name="$1" />
+$0

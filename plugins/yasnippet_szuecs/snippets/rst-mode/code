@@ -1,0 +1,7 @@
+#name: code
+#key: code
+# --
+#
+.. code-block:: ${1:bash}
+
+    $0

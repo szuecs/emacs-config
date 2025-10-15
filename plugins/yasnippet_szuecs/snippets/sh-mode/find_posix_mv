@@ -1,0 +1,38 @@
+# name: posix find recursive - mv
+# key: find
+# --
+
+TS="\$(( \$(date +%s) - 3600*12))"
+echo \$TS
+
+recursivefind () {
+    ( cd -P -- "\$1";
+    [ \$# -lt 3 ] || [ "\$PWD" = "\$3" ] || exit 1;
+    for i in ..?* .[!.]* *;
+    do
+        [ -e "\$i" ] && eval "\$2 \"\\$i\"";
+   #     [ -d "\$i" ] && recursivefind "\$i" "\$2" "\${PWD%/}/\$i";
+    done )
+}
+
+mv_handler () {
+  if [[ -f \${1} && \$(date -r \${1} +%s) -lt \$TS ]]; then
+#    fname=\${1%/*}
+    fname=\${1##*/}
+    mkdir -p /data3/zal_storage/invoice-temp/archive/\${fname:0:2}
+    mv \${1} /data3/zal_storage/invoice-temp/archive/\${fname:0:2}/\${fname}
+#    echo "mv \${1} /data3/zal_storage/invoice-temp/archive/\${fname:0:2}/\${fname}"
+  fi
+}
+
+mv_all () {
+  target=\$1
+  recursivefind \$target mv_handler
+}
+
+if [ ! \$1 ]; then
+    echo "\$0 <dir>"
+    exit 1
+fi
+mv_all \$1
+

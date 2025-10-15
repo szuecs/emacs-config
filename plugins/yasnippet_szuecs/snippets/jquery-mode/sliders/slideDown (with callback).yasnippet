@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# uuid: 3E97CCBD-C903-4263-9FBB-A9F63B1F9F34
+# key: .slideDown
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: slideDown (with callback)
+## condition: "
+# --
+.slideDown(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/}, function() {
+	${0://Stuff to do *after* the animation takes place};
+});

@@ -1,0 +1,12 @@
+#name : file {.. content => template}
+#key: file
+# --
+file {
+    "${1:name}":
+        owner   => '${2:root}',
+        group   => '$2',
+        mode    => '0${3:644}',
+        require => ${4:Resource['dependency']},
+        content => template("${5:module/template}.erb");
+}
+$0

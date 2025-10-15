@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# uuid: 2441B939-ECCF-4815-8B44-E91F6124FD92
+# key: print
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: print string
+## condition: "
+# --
+li		\$v0, 1		# system call #4 - print string
+la		\$a0, ${1:string}
+syscall				# execute

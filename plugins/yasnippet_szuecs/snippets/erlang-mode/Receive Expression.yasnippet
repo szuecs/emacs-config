@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# uuid: 26D57EA7-1098-419B-B96C-8B90CCC57654
+# key: rcv
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Receive Expression
+## condition: "
+# --
+receive
+${1:	${2:pattern}${3: when ${4:guard}} ->
+		${5:body}
+}${6:after
+	${7:expression} ->
+		${8:body}
+}end

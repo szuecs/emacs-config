@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# uuid: 2D7B6866-400B-4120-9EC1-0397E33169A1
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Environment — \begin{}…\end{}
+## binding: "^@W
+## condition: "text.tex.latex
+# --
+${TM_SELECTED_TEXT/(\s*).*/$1/m}\begin{${1:environment}}
+${TM_SELECTED_TEXT/(.+)|\n\z/(?1:\t$0)/g}
+${TM_SELECTED_TEXT/(\s*).*/$1/m}\end{${1:environment}}

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# uuid: 18F43074-566D-4AD9-8DCE-9C26B8516B64
+# key: case
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Case
+## condition: "
+# --
+case ${1:a} of ${2:True} -> ${3:$1}
+	${1/./ /g}     ${4:otherwise} -> ${0:$1}

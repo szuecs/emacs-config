@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# uuid: 688FBE87-D5B4-445D-AD02-231F6E99F9C1
+# key: begin
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: \begin{}…\end{}
+## condition: "text.tex.latex
+# --
+\\begin{${1:env}}
+	${1/(enumerate|itemize|list)|(description)|.*/(?1:\item )(?2:\item)/}$0
+\\end{${1:env}}

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# key: cons
+# name: Constants wit iota enumerator
+# --
+const (
+    _ = iota
+    ${1:KB} ${2:ByteSize} = ${3:1 << (10 * iota)}
+    MB
+    GB
+)

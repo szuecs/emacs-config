@@ -1,0 +1,19 @@
+# name: Kubernetes daemonset
+# key: ds
+# --
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: ${1:name}
+  labels:
+    app: ${2:label}
+spec:
+  template:
+    metadata:
+      labels:
+        app: ${2:label}
+    spec:
+      containers:
+      - name: ${1:name}
+        image: ${3:image}
+

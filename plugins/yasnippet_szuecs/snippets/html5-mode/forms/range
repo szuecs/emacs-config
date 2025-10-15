@@ -1,0 +1,4 @@
+#name : <input type="range"... />
+#key: range
+# --
+<input type="range" min="$1" max="$2" value="${3:0}" />

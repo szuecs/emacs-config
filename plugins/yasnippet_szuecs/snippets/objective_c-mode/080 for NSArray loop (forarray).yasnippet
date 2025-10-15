@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# uuid: E0C97B6C-E546-4B73-9BEE-1207F6F920C3
+# key: forarray
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: NSArray Loop
+## condition: "
+# --
+unsigned int	${1:object}Count = [${2:array} count];
+
+for(unsigned int index = 0; index < $1Count; index += 1)
+{
+	${3:id}	$1 = [$2 objectAtIndex:index];
+	$0
+}

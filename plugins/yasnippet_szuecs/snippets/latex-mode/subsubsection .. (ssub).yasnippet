@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# uuid: DF92968D-BF59-11D9-A668-000A95C0F626
+# key: subs
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Sub Sub Section
+## condition: "text.tex.latex
+# --
+\subsubsection{${1:subsubsection name}} % (fold)
+\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3)/g}}}
+${0:`yas/selected-text`}
+% subsubsection $2 (end)

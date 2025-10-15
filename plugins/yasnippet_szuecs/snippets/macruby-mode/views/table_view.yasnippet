@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: A4274485-B258-40D9-A650-FCC4BA7D2891
+# key: table
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: table_view
+## condition: "
+# --
+table_view(:data => ${1:TableDataSource.new(${2:[
+	{ :$10 => "some data" \}
+]})}, :columns => [
+	column(:id => :${10:field_id}, :title => "${11:$10}")
+])

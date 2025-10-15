@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# uuid: 6F3ABAC6-EEC9-4797-8D4A-6FD549094852
+# key: tmphp
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Include TextMate Support Script
+## condition: "
+# --
+// === TextMate error handling ===
+`if [[ "$TM_BUNDLE_SUPPORT" == "$HOME"* ]]; then
+  echo "// NOTE: Your PHP bundle is checked out to your home directory."
+  echo "// If the webserver process does not have permission to access"
+  echo "// the included file, you can replace"
+  echo "// ‘${TM_BUNDLE_SUPPORT%Bundles*}’ with"
+  echo "// ‘$(find_app TextMate.app)/Contents/SharedSupport/’."
+fi`
+@include_once '$TM_BUNDLE_SUPPORT/textmate.php';

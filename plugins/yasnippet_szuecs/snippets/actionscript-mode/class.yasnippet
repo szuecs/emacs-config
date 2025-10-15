@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# uuid: D043AB42-266B-4715-A396-E6ECAF1F4BC0
+# key: class
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: class
+## condition: "
+# --
+class ${1:ClassName} {
+	var _${2/\u/_/g};
+	function $1($2){
+		_${2/:(.*)//g} = ${2/:(.*)//g};$0
+	}
+}

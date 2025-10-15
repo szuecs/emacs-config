@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# uuid: E17ACBC4-BDC8-4ACE-B67A-9148BA4B8B18
+# key: transaction
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: with transaction … end
+## condition: "
+# --
+with transaction${1/.+/ /}${1:session}
+	${0:-- statements}
+end transaction

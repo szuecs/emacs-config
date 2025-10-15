@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# key: sel
+# name: Select Statement channel multiplexing
+# --
+select {
+case ${2:msg} := <-${1:ch}:
+     $0
+}

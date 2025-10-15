@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# uuid: 0CCBE04E-F4E2-4E55-9506-7DE67ACF8388
+# key: cla
+# name: class .. < ParentClass .. initialize .. end
+## condition: "
+# --
+class ${1:`(let ((fn (capitalize (file-name-nondirectory
+                                 (file-name-sans-extension
+				 (or (buffer-file-name)
+				     (buffer-name (current-buffer))))))))
+           (cond
+             ((string-match "_" fn) (replace-match "" nil nil fn))
+              (t fn)))`} < ${2:ParentClass}
+  def initialize(${3:args})
+    super(${3:args})
+    $0
+  end
+end

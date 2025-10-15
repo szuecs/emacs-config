@@ -1,0 +1,13 @@
+#name : vcsrepo {..}
+#key: svn
+# --
+file { "${1:/path/to/workingcopy}":
+  ensure => directory,
+}
+vcsrepo { "$1":
+  provider => "svn",
+  ensure   => latest,
+  source   => "https://${2:svn.host.tld/repo/trunk}",
+  require  => File["$1"],
+}
+$0

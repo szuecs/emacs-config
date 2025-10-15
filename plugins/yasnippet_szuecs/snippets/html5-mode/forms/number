@@ -1,0 +1,4 @@
+#name : <input type="number"/>
+#key: number
+# --
+<input type="number" id="$1" required="${2:required}" class="$3"  />

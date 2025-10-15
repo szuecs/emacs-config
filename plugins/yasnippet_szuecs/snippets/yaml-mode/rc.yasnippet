@@ -1,0 +1,19 @@
+# name: Kubernetes ReplicationController
+# key: rc
+# --
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: ${1:name}
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: ${1:name}
+    spec:
+      containers:
+      - name: ${1:name}
+        image: ${2:image:tag}
+        ports:
+        - containerPort: 80

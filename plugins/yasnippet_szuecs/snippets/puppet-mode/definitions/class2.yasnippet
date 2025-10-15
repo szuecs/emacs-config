@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# key: cla
+# name: class with params
+# --
+# Class: $1
+#
+# TODO: class description
+#
+# Parameters:
+# - The $user that Apache runs as
+#
+# Actions:
+#
+# Requires:
+#
+# Sample Usage:
+#
+class ${1:name} (
+    ${2:arg1}=${3:undef},
+) {
+    $0
+}

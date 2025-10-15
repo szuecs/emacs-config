@@ -1,0 +1,4 @@
+# name: UPDATE...
+# key: update
+# --
+UPDATE ${1:TableName} SET ${2:column} = '${3:value}' WHERE ${4:condition};

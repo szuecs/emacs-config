@@ -1,0 +1,32 @@
+# -*- mode: snippet -*-
+# uuid: 896618D0-C5C3-4DEB-BC47-4DED0B045BBD
+# key: cdcm
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Core Data Cache Misses
+## condition: "
+# --
+CoreData\$target:CoreData::BeginFaultCacheMiss
+{
+	self->cacheMissStart = vtimestamp;
+	printf("Cache Miss: %s",copyinstr(arg0));
+	ustack();
+}
+
+CoreData\$target:CoreData::EndFaultCacheMiss
+{
+	self->cacheMissEnd = (vtimestamp - self-> cacheMissStart) / 1000;
+	printf("Cache Miss Duration: %u",self->cacheMissEnd);
+}
+
+CoreData\$target:CoreData::BeginRelationshipCacheMiss
+{
+	self->relationshipCacheMissStart = vtimestamp;
+	printf("RCM Relationship: %s RCM Source: %s",copyinstr(arg0),copyinstr(arg1));
+	ustack();
+}
+
+CoreData\$target:CoreData::EndRelationshipCacheMiss
+{
+	self-> relationshipCacheMissEnd= (vtimestamp - self-> relationshipCacheMissStart) / 1000;
+	printf("RCM Duration: %u",self-> relationshipCacheMissEnd);
+}

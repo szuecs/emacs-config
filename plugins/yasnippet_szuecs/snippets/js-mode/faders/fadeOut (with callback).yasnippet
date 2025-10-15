@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# uuid: 9D75244D-9AD6-41EA-81D5-BE0AC1854D8A
+# key: .fadeOut
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: fadeOut (with callback)
+## condition: "
+# --
+.fadeOut(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/}, function() {
+	${0://Stuff to do *after* the animation takes place};
+});

@@ -1,0 +1,19 @@
+# name: Kubernetes service
+# key: svc
+# --
+apiVersion: v1
+kind: Service
+metadata:
+  name: ${1:name}
+  labels:
+    app: ${1:name}
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+      name: external
+  selector:
+    app: ${1:name}
+

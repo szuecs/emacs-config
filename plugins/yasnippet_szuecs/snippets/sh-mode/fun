@@ -1,0 +1,6 @@
+# name: define function
+# key: fun
+# --
+function ${1:fname} () {
+    $0
+}

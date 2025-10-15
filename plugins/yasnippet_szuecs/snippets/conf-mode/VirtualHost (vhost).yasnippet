@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# key: vhost
+# name: Virtual Host
+# --
+<VirtualHost ${1:example.org}:${2:port}>
+	ServerAdmin webmaster@$1
+	DocumentRoot ${3:/var/www/}
+	ServerName $1
+	ErrorLog logs/$1-error_log
+	CustomLog logs/$1-access_log common
+</VirtualHost>

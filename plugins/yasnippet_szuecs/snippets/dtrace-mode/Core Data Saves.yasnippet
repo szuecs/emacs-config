@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# uuid: 3B6C1576-5838-4C18-AA1A-6E7F928A6EDA
+# key: cds
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Core Data Saves
+## condition: "
+# --
+CoreData\$target:CoreData::BeginSave
+{
+	self-> saveStart = vtimestamp;
+	ustack();
+}
+
+CoreData\$target:CoreData::EndSave
+{
+	self->saveEnd = (vtimestamp - self->saveStart) / 1000;
+	trace(self->saveEnd);
+}
+

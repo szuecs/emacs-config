@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# uuid: D2783155-23F3-4B90-A317-5BD139471193
+# key: returning
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: returning do |variable| … end
+## condition: "
+# --
+returning ${1:variable} do${2/(^(?<var>\s*[a-z_][a-zA-Z0-9_]*\s*)(,\g<var>)*,?\s*$)|.*/(?1: |)/}${2:v}${2/(^(?<var>\s*[a-z_][a-zA-Z0-9_]*\s*)(,\g<var>)*,?\s*$)|.*/(?1:|)/}
+	$0
+end

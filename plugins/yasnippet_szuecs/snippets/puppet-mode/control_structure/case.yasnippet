@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# key: case
+# name: case .. default
+# --
+case \$${1:variable} {
+	"${2:value}": {
+		${3:# code}
+	}
+	default: {
+		${4:# code}
+	}
+}$0

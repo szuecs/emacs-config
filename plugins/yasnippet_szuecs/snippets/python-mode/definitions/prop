@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# key: property
+# name: New Property
+# --
+def ${1:foo}():
+    doc = """${2:doc.}"""
+    def fget(self):
+        return self.$1
+    def fset(self, value):
+        self.$1 = value
+    def fdel(self):
+        del self.$1
+    return locals()
+$1 = property(**$1())
+$0

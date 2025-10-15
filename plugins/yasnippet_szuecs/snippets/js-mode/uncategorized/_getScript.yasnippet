@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# uuid: 1E41CC95-3D42-4CC9-BD69-BA86FB8FE34A
+# key: $.getScript
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: $.getScript
+## condition: "
+# --
+\$.getScript('${1:path/to/file}'${2/(.+)/(?1:, function\(data, textStatus\) {
+  :)/}${2://optional stuff to do after getScript}${2/(.+)/(?1:
+}:)/});
+$0

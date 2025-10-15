@@ -1,0 +1,4 @@
+# name: INSERT...
+# key: insert
+# --
+INSERT INTO ${1:TableName} (${2:col1,col2}) VALUES (${3:val1,val2}) ;

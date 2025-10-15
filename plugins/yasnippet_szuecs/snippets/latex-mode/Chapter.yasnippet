@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# uuid: 47FA7321-6BDC-413B-9F59-63ACBB0E2080
+# key: cha
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Chapter
+## condition: "text.tex.latex
+# --
+\chapter{${1:chapter name}} % (fold)
+\label{cha:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3)/g}}}
+${0:`yas/selected-text`}
+% chapter $2 (end)

@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# uuid: 4FB403FC-F441-447F-9AAD-E2BE13AD49ED
+# key: class
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Package
+## condition: "
+# --
+package ${1:ClassName};
+
+${2:use base qw(${3:ParentClass});
+
+}sub new {
+	my \$class = shift;
+	\$class = ref \$class if ref \$class;
+	my \$self = bless {}, \$class;
+	\$self;
+}
+
+1;

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# uuid: F59D0C3A-B5AC-40D6-AB07-05CE8CB784A9
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Add Row
+## binding: "
+## condition: "text.tex.latex meta.function.environment.tabular.latex
+# --
+\\\\
+$0${TM_CURRENT_LINE/^[^&]+|[^&]+$|([^&]+)/ (?1: )/g}

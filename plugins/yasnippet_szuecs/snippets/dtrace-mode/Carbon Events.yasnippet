@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# uuid: 9F2B4569-F2C9-4818-B5F6-DC199CC49D94
+# key: caev
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Carbon Events
+## condition: "
+# --
+pid\$target::WaitNextEvent:entry
+{
+	self->evtPointer = (user_addr_t)arg1;
+	ustack();
+}
+
+pid\$target::WaitNextEvent:return
+{
+	self->theEvent = (unsigned int)*(uint16_t*)copyin(self->evtPointer, 4);
+
+	this->eventStr = self->theEvent == 0 ? "Null Event" : self->theEvent == 1 ? "Mouse Down" : self->theEvent == 2 ? "Mouse Up" : self->theEvent == 3 ? "Key Down" : self->theEvent == 4 ? "Key Up" : self->theEvent == 5 ? "Auto Key" : self->theEvent == 6 ? "Update Event" : self->theEvent == 7 ? "Disk Event" : self->theEvent == 8 ? "Activate Event" : self->theEvent == 15 ? "OS Event" : self->theEvent == 23 ? "High Level Event" : "Unknown";
+
+	printf("Event Kind: %i Event Type: %s",self->theEvent,this->eventStr);
+}

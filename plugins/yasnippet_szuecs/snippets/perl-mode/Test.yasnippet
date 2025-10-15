@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# uuid: 1B0FB64D-63C1-469E-B0B6-945477603B01
+# key: test
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Test
+## condition: "
+# --
+#!/usr/bin/perl -w
+
+use strict;
+use Test::More tests => ${1:1};
+use ${2:ModuleName};
+
+ok(${3:assertion});

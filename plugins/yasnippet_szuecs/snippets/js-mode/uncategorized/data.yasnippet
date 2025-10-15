@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# uuid: 57F5AE77-4616-4DE0-9D61-2D066E6273D3
+# key: .data
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: data
+## condition: "
+# --
+.data('${1:data}'${2/(.+)/(?1:, :)/}${2/(^[0-9]+$)|.+/(?1::')/}${2:value}${2/(^[0-9]+$)|.+/(?1::')/})$0

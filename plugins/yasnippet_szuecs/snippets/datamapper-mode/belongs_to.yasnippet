@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# uuid: DC3F1283-B8CE-4816-8724-F2C2A54D7962
+# key: bt
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: belongs_to
+## condition: "
+# --
+belongs_to :${1:object}${2:, :class_name => "${3:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}", :foreign_key => "${4:$1_id}"}

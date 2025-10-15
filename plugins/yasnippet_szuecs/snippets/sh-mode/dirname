@@ -1,0 +1,4 @@
+# name: dirname
+# key: dirname
+# --
+\${${1:VAR}%/*}

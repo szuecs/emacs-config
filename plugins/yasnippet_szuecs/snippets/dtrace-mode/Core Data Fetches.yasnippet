@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# uuid: 0E651AF4-7FA2-4484-B076-C07FC5760BAD
+# key: cdfe
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: Core Data Fetches
+## condition: "
+# --
+CoreData\$target:CoreData::BeginFetch
+{
+	self->fetchStart = vtimestamp;
+	printf("Entity: %s",copyinstr(arg0));
+	ustack();
+}
+
+CoreData\$target:CoreData::EndFetch
+{
+	self->fetchEnd = (vtimestamp - self-> fetchStart) / 1000;
+	printf("Fetch Count: %i Duration: %u",arg0,self->fetchEnd);
+}
+

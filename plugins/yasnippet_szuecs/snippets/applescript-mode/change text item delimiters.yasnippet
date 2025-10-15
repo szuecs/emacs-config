@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# uuid: 016BF4B7-53D3-49E0-A8DB-033917FAD031
+# key: delim
+# contributor: Translated from textmate snippet by PROGRAM_NAME
+# name: change text item delimiters
+## condition: "
+# --
+set oldDelims to AppleScript's text item delimiters
+set AppleScript's text item delimiters to {"${1:,}"}
+${0:-- statements}
+set AppleScript's text item delimiters to oldDelims

@@ -1,0 +1,5 @@
+#name: img
+#key: img
+# --
+.. image:: ${1:images/foo.svg}
+
