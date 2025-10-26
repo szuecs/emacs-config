@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# key: table
+# name: Table dirven tests
+# --
+for _, tt := range []struct {
+	name string
+	args string
+	want time.Duration
+	wantErr bool
+}{
+	{
+		name: "test parse time.Duration 1s",
+		args: "1s",
+		want: 1 * time.Second,
+		wantErr: false,
+	},
+	{
+		name: "test parse time.Duration 1s",
+		args: "1s",
+		want: 1 * time.Second,
+		wantErr: false,
+	}} {
+	t.Run(tt.name, func(t *testing.T) {
+		if got, err := parseDurationFlag(tt.args); got != tt.want || (tt.wantErr && err == nil) || (!tt.wantErr && err != nil) {
+			t.Errorf("Failed to parse duration: Want %v, got %v, err %v", tt.want, got, err)
+		}
+	})
+}

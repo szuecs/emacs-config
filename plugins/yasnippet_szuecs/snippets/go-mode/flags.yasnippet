@@ -1,0 +1,25 @@
+# key: flags
+# name: flags with main
+# --
+// implement []string for args
+type cmdSlice []string
+
+func (i *cmdSlice) String() string {
+	return strings.Join(*i, ", ")
+}
+
+func (i *cmdSlice) Set(value string) error {
+	*i = append(*i, value)
+	return nil
+}
+
+func main() {
+	var cmds cmdSlice
+	var user string
+	var port int
+	flag.Var(&cmds, "cmd", "Commands to run.")
+	flag.StringVar(&user, "user", "root", "User to access remote hosts, defaults to root.")
+	flag.IntVar(&port, "port", 22, "Port to access remote hosts, defaults to 22.")
+	flag.Parse()
+	$0
+}
